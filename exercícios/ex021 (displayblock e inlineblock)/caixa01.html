@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo de caixas</title>
+    <style>
+      h1 {
+        background-color: lightgray;
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        border: 10px solid darkslategray;
+
+        padding: 10px;
+
+        margin: 20px auto 40px auto;
+
+        /* Short-hands = Se eu colocar "padding: 10px;", todos os paddings ficarão com 10px.
+
+        Se eu colocar "padding: 10px 20px;", o padding de cima e de baixo ficarão iguais (10px) e o padding da esquerda e o da direita ficarão iguais (20px).
+
+        Se eu colocar "padding: 10px 20px 30px 40px;", cada lado do padding terá sua própria medida, o de cima ficará 10px, o da direita 20px, o de baixo 30px, e o da esquerda 40px.
+
+        Sequência: horária (cima, direita, baixo, esquerda) */
+
+        outline: 5px dashed salmon;
+      }
+
+      h1:hover {
+        background-color: rgb(69, 218, 255);
+      }
+
+      a {
+        border: 5px dashed darkslategray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exemplos de caixa box-level</h1>
+    <p>
+      Parágrafos também são exemplos de box-level, mas os
+      <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como
+      tudo isso funciona.
+    </p>
+  </body>
+</html>

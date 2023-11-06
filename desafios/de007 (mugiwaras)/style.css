@@ -1,0 +1,26 @@
+p{
+    text-indent: 20px;
+    text-align: center;
+    line-height: 22px;
+}
+h1{
+    text-align:center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+h2{
+text-align: center;
+}
+h3{
+    text-align: center;
+}
+*{
+    font-family: arial;
+}
+body{
+    background-color: antiquewhite;
+}
+img{
+    margin:auto;
+    display:block
+}
