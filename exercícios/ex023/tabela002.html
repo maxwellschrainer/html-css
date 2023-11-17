@@ -10,12 +10,19 @@
       }
 
       table {
-        width: 400px;
+        width: 450px;
         border-collapse: collapse;
       }
       td,
       th {
         border: 1px solid black;
+        padding: 5px;
+      }
+
+      caption{
+        background-color: lightgray;
+        font-weight: bold;
+        font-size: 1.5em;
         padding: 5px;
       }
 
@@ -34,6 +41,7 @@
     <!--
         Anatomia para tabelas grandes
         TABLE
+            CAPTION (LEGENDA)
             THEAD
                 TR, TD, TH
             TBODY
@@ -42,10 +50,11 @@
                 TR, TD, TH
     -->
     <table>
+      <caption>População das unidades federativas</caption>
       <thead>
         <tr>
-          <th>Estado</th>
-          <th>População</th>
+          <th scope="col">Estado</th>
+          <th scope="col" style="width: 120px;">População</th>
         </tr>
       </thead>
       <tbody>
@@ -61,11 +70,23 @@
           <td>Rio de Janeiro</td>
           <td class="num">17 264 943</td>
         </tr>
+        <tr>
+          <td>Bahia</td>
+          <td class="num">14 873 064</td>
+        </tr>
+        <tr>
+          <td>Paraná</td>
+          <td class="num">11 433 957</td>
+        </tr>
+        <tr>
+          <td>Rio Grande do Sul</td>
+          <td class="num">11 377 239</td>
+        </tr>
       </tbody>
       <tfoot>
         <tr>
-          <th>Total de habitantes</th>
-          <td class="num"><strong>84 352 783</strong></td>
+          <th scope="row">Total de habitantes</th>
+          <td class="num"><strong>122 037 043</strong></td>
         </tr>
       </tfoot>
     </table>
