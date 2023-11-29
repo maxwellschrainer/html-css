@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iframes</title>
+    <style>
+      iframe {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Meu site principal</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptate
+      corporis atque non cum numquam, quisquam alias repellendus fugit voluptas
+      perferendis maiores tenetur. Tenetur, architecto saepe? Vel nam
+      repudiandae ab?
+    </p>
+    <!--
+        Segurança para iframes
+        sandbox="sandbox" == segurança máxima, porém pouco acesso ao iframe.
+        sandbox="allow-same-origin" == Permite o uso de pessoas da mesma origem/servidor.
+        sandbox="allow-forms" == Permite os formulários.
+        sandbox="allow-scripts" == Permite scripts.
+        referrerpolicy="no-referrer" == Proíbe o iframe de coletar dados do usuário.
+    -->
+    <iframe
+      src="paginas-extras/pag004.html"
+      sandbox="sandbox"
+      referrerpolicy="no-referrer"
+    >
+      Seu navegador não é compatível com isso...
+    </iframe>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam beatae
+      esse, nobis aperiam possimus harum corrupti inventore fuga eos voluptate
+      rem laboriosam asperiores, vero maxime assumenda neque! Similique,
+      quisquam excepturi?
+    </p>
+  </body>
+</html>
