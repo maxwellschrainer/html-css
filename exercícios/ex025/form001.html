@@ -15,19 +15,25 @@
 
     <!-- 
       autocomplete="off": desliga o autocomplete nas caixas de texto 
+
       action="cadastro.php": redirecionamento após o submit do formulário
+
+      method="post": Faz os dados colocados no formulário não aparecerem na URL
+      method="get": Faz os dados colocados no formulário aparecerem na URL, da para ser usado em dados que não são sensíveis, porém, só pode ser usado se o formulário não ultrapassar três mil (3000) caracteres.
     -->
 
-    <form action="cadastro.php" autocomplete="off">
+    <form action="cadastro.php" method="post" autocomplete="off">
       <p>
         <label for="iname">Nome:</label>
         <input type="text" name="name" id="iname" />
       </p>
+
       <p>
         <label for="isurname">Sobrenome:</label>
         <input type="text" name="surname" id="isurname" />
-      </p>
+      </p>  
       <p><input type="submit" value="Enviar" /></p>
     </form>
+    
   </body>
 </html>
