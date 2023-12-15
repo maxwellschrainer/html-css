@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <h1>Teste de formulário</h1>
+
+    <!--
+        min = O número mínimo para por no formulário
+        max = O número máximo para por no formulário
+        
+        step = Com o input="number", esta propriedade define de quanto em quanto o número vai subir, nesse exemplo é a média.
+
+        input="media": Média de algo, geralmente nota de provas.
+
+        input="month": Auto-explicativo, input para mês e ano.
+
+        input-"date": Input para uma data completa. (dia, mês, ano)
+
+        input-"time": Input para tempo (relógio)
+    -->
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+      <label for="nome">Nome</label>
+      <input
+        type="text"
+        name="nome"
+        id="nome"
+        required
+        maxlength="30"
+        placeholder="Nome completo"
+        autocomplete="name"
+      />
+      <p>
+        <label for="media">Média</label>
+        <input
+          type="number"
+          name="media"
+          id="media"
+          required
+          min="0"
+          max="10"
+          placeholder="0 a 10"
+          step="0.25"
+        />
+      </p>
+      <p>
+        <label for="mes">Período Letivo</label>
+        <input type="month" name="mes" id="mes" value="2023-12" />
+      </p>
+      <p>
+        <label for="dia">Dia da prova</label>
+        <input type="date" name="dia" id="dia" />
+      </p>
+      <p>
+        <label for="hora">Horário da prova</label>
+        <input type="time" name="hora" id="hora" />
+      </p>
+      <p>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </p>
+    </form>
+  </body>
+</html>
