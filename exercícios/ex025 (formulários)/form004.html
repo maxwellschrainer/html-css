@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <!--
+      fieldset: Agrupamento de dados
+      legends: "Título" para o agrupamento de dados
+
+      pattern: Espaço para expressões regulares
+      
+      Estudar mais sobre RegEx
+        -->
+  <body>
+    <h1>Exemplo de formulário</h1>
+    <form action="" method="get" autocomplete="on">
+      <fieldset>
+        <legend>Dados pessoais</legend>
+        <p>
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            required
+            minlength="5"
+            maxlength="30"
+            placeholder="Nome e sobrenome"
+          />
+        </p>
+        <p>
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            autocomplete="email"
+            placeholder="nome@email.com"
+          />
+        </p>
+        <p>
+          <label for="tel">Telefone</label>
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            autocomplete="tel"
+            required
+            pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
+            placeholder="(xx)xxxx-xxxx"
+          />
+        </p>
+        <p>
+          <input type="submit" value="Enviar" />
+          <input type="reset" value="Limpar" />
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
