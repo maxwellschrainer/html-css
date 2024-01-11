@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulários</title>
+  </head>
+  <body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="get">
+      <fieldset>
+        <legend>Sexo</legend>
+
+        <input type="radio" name="sexo" id="mas" checked value="M" />
+        <label for="mas">Masculino</label> <br />
+        <input type="radio" name="sexo" id="fem" value="F" />
+        <label for="fem">Feminino</label>
+      </fieldset>
+
+      <!--
+        input:radio = É para caixas de marcação que só podem ter uma resposta.
+        Os "input:radio" devem ter o mesmo "name".
+
+        value="" = Impõe um valor para o input.
+
+        checked = Quando a página for aberta, a caixa que estiver com checked já estará marcada
+    -->
+
+      <fieldset>
+        <legend>Esportes favoritos</legend>
+
+        <input type="checkbox" name="esbas" id="esbas" checked />
+        <label for="esbas">Basquete</label>
+        <br />
+
+        <input type="checkbox" name="esfut" id="esfut" />
+        <label for="esfut">Futebol</label>
+        <br />
+
+        <input type="checkbox" name="esnat" id="esnat" />
+        <label for="esnat">Natação</label>
+        <br />
+
+        <input type="checkbox" name="esten" id="esten" />
+        <label for="esten">Tênis</label>
+      </fieldset>
+
+      <!--
+        input:checkbox = É para caixas de marcação que podem ter mais de uma resposta.
+      -->
+
+      <p>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </p>
+    </form>
+  </body>
+</html>
