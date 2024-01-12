@@ -6,15 +6,16 @@
     <title>Formulários</title>
   </head>
   <body>
-    <form action="cadastro.php" method="get">
+    <form action="cadastro.php" method="post">
       <h1>Exemplo de formulário</h1>
 
       <p>
+        <label for="estado">Estado:</label>
         <select name="estado" id="estado">
           <optgroup label="Região Sudeste">
             <option value="MG">Minas Gerais</option>
             <option value="RJ">Rio de Janeiro</option>
-            <option value="SP" selected>São Paulo</option>
+            <option value="SP">São Paulo</option>
           </optgroup>
 
           <optgroup label="Região Nordeste">
@@ -25,10 +26,19 @@
         </select>
       </p>
 
+      <!--
+        <select> = O select é utilizado para abrir uma lista em que opções já são pré-determinadas.
+
+        <option> = As opções pré-determinadas serão colocadas dentro da tag <option>, para que assim a lista do <select> tenha dados selecionáveis.
+
+        <optgroup> = As tags <option> podem ser armazenadas em grupos, como o exemplo à cima, o grupo foi determinado como região, e dentro são estados de cada região.
+            Dentro da tag <optgroup> é necessário a tag <label> para poder nomear o grupo dentro da lista.
+      -->
+
       <p>
         <label for="prof">Profissão:</label>
-        <input type="text" name="profi" id="iprofi" list="lstprofi"/>
-        
+        <input type="text" name="profi" id="iprofi" list="lstprofi" />
+
         <datalist id="lstprofi">
           <option value="DEV">Desenvolvedor(a)</option>
           <option value="PROF">Professor(a)</option>
@@ -36,6 +46,33 @@
           <option value="CAR">Carpinteiro(a)</option>
         </datalist>
       </p>
+
+      <!--
+        <datalist> = Uma caixa para adicionar dados com <option>.
+            Será necessário um id="" para que a lista seja encontrada pelo input, que possivelmente será um input type:"text"
+            
+        <option> = Propriedade para armazenar um determinado dado dentro do <datalist>. 
+
+        "list" = Para que os dados do <datalist> sejam encontrados pelo "input", a relação desta lista não será encontrada com "id" e sim com "list".
+            Por exemplo: Se o datalist tem o id="lstprofi", o input será relacionado com list="lstprofi" para que a lista funcione no input...
+
+        (O input ainda será digitável, mas o datalist dará possíveis escolhas já prontas)
+      -->
+
+      <p>
+        <label for="imsg">Mensagem:</label> <br />
+        <textarea
+          name="msg"
+          id="imsg"
+          cols="30"
+          rows="10"
+          placeholder="Faça um comentário."
+        ></textarea>
+      </p>
+
+      <!--
+        <textarea> = Cria uma área para digitar algum texto.
+      -->
 
       <p>
         <input type="submit" value="Enviar" />
