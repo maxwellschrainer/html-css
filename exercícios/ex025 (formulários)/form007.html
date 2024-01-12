@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulários</title>
-</head>
-<body>
+  </head>
+  <body>
     <form action="cadastro.php" method="get">
-        <h1>Exemplo de formulário</h1>
-        <p>
-            <input type="submit" value="Enviar" />
-            <input type="reset" value="Limpar" />
-          </p>
+      <h1>Exemplo de formulário</h1>
+
+      <p>
+        <select name="estado" id="estado">
+          <optgroup label="Região Sudeste">
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP" selected>São Paulo</option>
+          </optgroup>
+
+          <optgroup label="Região Nordeste">
+            <option value="MA">Maranhão</option>
+            <option value="PE">Pernambuco</option>
+            <option value="RN">Rio Grande do Norte</option>
+          </optgroup>
+        </select>
+      </p>
+
+      <p>
+        <label for="prof">Profissão:</label>
+        <input type="text" name="profi" id="iprofi" list="lstprofi"/>
+        
+        <datalist id="lstprofi">
+          <option value="DEV">Desenvolvedor(a)</option>
+          <option value="PROF">Professor(a)</option>
+          <option value="MED">Médico(a)</option>
+          <option value="CAR">Carpinteiro(a)</option>
+        </datalist>
+      </p>
+
+      <p>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </p>
     </form>
-</body>
+  </body>
 </html>
