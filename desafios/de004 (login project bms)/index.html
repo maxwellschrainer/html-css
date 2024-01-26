@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-query.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos/style.css" />
+    <link rel="stylesheet" href="estilos/media-query.css" />
+  </head>
+  <body>
     <main>
+      <section id="login">
         <div id="imagem"></div>
-        <div></div>
+        <aside>
+          <h1>Login</h1>
+          <p>
+            Seja bem vindo(a), faça o seu login abaixo para acessar a página.
+          </p>
+        </aside>
+        <form action="login.php">
+          <div id="formulário">
+            <span class="material-symbols-outlined">person</span>
+            <input type="email" name="email" id="iemail" />
+            <label for="iemail"></label>
+          </div>
+
+          <div id="senha">
+            <span class="material-symbols-outlined">vpn_key</span>
+            <input type="password" name="senha" id="isenha" />
+            <label for="isenha"></label>
+          </div>
+          
+          <input type="submit" value="Entrar" />
+        </form>
+        <a href="esqueci.html" id="esqueci"
+          >Esqueci a senha
+          <span class="material-symbols-outlined">mail</span></a
+        >
+      </section>
     </main>
-</body>
+  </body>
 </html>
