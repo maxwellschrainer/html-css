@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Project BMS</title>
     <link rel="stylesheet" href="estilos/style.css" />
+    <link rel="stylesheet" href="estilos/media-query.css">
   </head>
   <body>
     <main>
@@ -19,7 +20,21 @@
             poder fazer as configurações no seu ambiente.
           </p>
         </div>
-      </section>
+
+        <form action="login.php" method="post">
+
+          <input type="email" name="email" id="iemail" placeholder="Insira o seu e-mail" required maxlength="40" minlength="8">
+          <label for="iemail">E-mail</label>
+
+          <input type="password" name="senha" id="isenha">
+          <label for="isenha">Senha</label>
+          
+          <div>
+            <input type="submit" value="Entrar">
+                    </form>
+                    <a href="esqueci.html">Esqueci a senha</a>
+                  </section>
+          </div>
     </main>
   </body>
 </html>
