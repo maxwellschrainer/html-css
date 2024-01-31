@@ -1,1 +1,10 @@
 @charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+    #imagem{
+        float: left;
+    }
+    #formulário{
+        float: right;
+    }
+}
